@@ -4,7 +4,6 @@ string username = Console.ReadLine();
 if(username.ToLower() == "маша")
 {
     Console.WriteLine("Ура, этоже Маша");
-
 }
 else
 {
