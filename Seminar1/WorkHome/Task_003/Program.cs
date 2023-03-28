@@ -4,8 +4,11 @@ Console.Write("Введите число ");
 string inputValue = Console.ReadLine();
 int number = Convert.ToInt32(inputValue);
 
-if (number / 2 == int)
+if (number % 2 == 0)
 {
     System.Console.WriteLine("Число является четным");
 }
-System.Console.WriteLine("Число является нечетным");
+else
+{
+    System.Console.WriteLine("Число является нечетным");
+}
