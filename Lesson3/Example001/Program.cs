@@ -24,7 +24,7 @@ Metod2("Иван Пупкин");
 
 // 2.1
 
-void Metod21(string msg1, msg2)
+void Metod21(string msg1, string msg2)
 {
     System.Console.WriteLine($"Привет, {msg1}, {msg2}");
 }
@@ -65,7 +65,7 @@ string Metod4(int count, string text)
 
     while (i < count)
     {
-        resalt = resalt + text
+        resalt = resalt + text;
         i++;
     }
     return resalt;

@@ -18,7 +18,7 @@ bool ValidateCoords(int x, int y)
     if (x == 0 || y == 0)
     {
         System.Console.WriteLine("Вы ввели нолевое значение координат");
-        return false
+        return false;
     }
     return true;
 }
