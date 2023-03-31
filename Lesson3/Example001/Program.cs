@@ -73,3 +73,21 @@ string Metod4(int count, string text)
 
 string res = Metod4(4, "Текст + ");    // Текст + Текст + Текст + Текст + 
 System.Console.WriteLine(res);
+
+// Описание метода с использованием "for"
+
+string Metod41(int count, string text)
+{
+    //int i = 0; - перенесено в "for"
+    string resalt = String.Empty;
+    for (int i = 0; i < count; i++)
+    //wile (i < count) - перенесено в "for"
+    {
+        resalt = resalt + text;
+        //i++; - перенесено в "for"
+    }
+    return resalt;
+}
+
+string res = Metod1(4, "Текст + ");    // Текст + Текст + Текст + Текст + 
+System.Console.WriteLine(res);
