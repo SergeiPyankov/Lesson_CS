@@ -43,6 +43,9 @@ Lesson4
     Example003
         / Рекурсия. Расчет факториала
 
+    Example004
+        / Фибоначи
+
 Manual
 
     Metod
