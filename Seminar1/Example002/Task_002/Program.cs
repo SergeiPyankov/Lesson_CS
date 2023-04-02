@@ -2,41 +2,41 @@
 // 3 -> Среда 
 // 5 -> Пятница
 
-Console.Write("Введите число дня недели от 1 до 7: ");
-string inputDate = Console.ReadLine();
+// Console.Write("Введите число дня недели от 1 до 7: ");
+// string inputDate = Console.ReadLine();
 
-if (inputDate == "1")
-{
-    Console.WriteLine("Понедельник");
-}
-if (inputDate == "2")
-{
-    Console.WriteLine("Вторник");
-}
-if (inputDate == "3")
-{
-    Console.WriteLine("Среда");
-}
-if (inputDate == "4")
-{
-    Console.WriteLine("Четверг");
-}
-if (inputDate == "5")
-{
-    Console.WriteLine("Пятница");
-}
-if (inputDate == "6")
-{
-    Console.WriteLine("Суббота");
-}
-if (inputDate == "7")
-{
-    Console.WriteLine("Воскресенье");
-}
-if (inputDate < 1 || inputDate > 7)
-{
-    Console.WriteLine("Ошибка");
-}
+// if (inputDate == "1")
+// {
+//     Console.WriteLine("Понедельник");
+// }
+// if (inputDate == "2")
+// {
+//     Console.WriteLine("Вторник");
+// }
+// if (inputDate == "3")
+// {
+//     Console.WriteLine("Среда");
+// }
+// if (inputDate == "4")
+// {
+//     Console.WriteLine("Четверг");
+// }
+// if (inputDate == "5")
+// {
+//     Console.WriteLine("Пятница");
+// }
+// if (inputDate == "6")
+// {
+//     Console.WriteLine("Суббота");
+// }
+// if (inputDate == "7")
+// {
+//     Console.WriteLine("Воскресенье");
+// }
+// if (inputDate < 1 || inputDate > 7)
+// {
+//     Console.WriteLine("Ошибка");
+// }
 
 // Альтернативный пример решения с применением массива
 
@@ -53,6 +53,6 @@ while (true)                                                                    
     {
         int weekIndex = userNumber - 1;                                                                               // присваивание индекса в двоичной системе (0,1,2,3,4,5,6)
         Console.WriteLine($"Вы ввели число {userNumber} это день недели: {week[weekIndex]}");                         // вывод итогового значения
-    break;
+        break;
     }
 }
