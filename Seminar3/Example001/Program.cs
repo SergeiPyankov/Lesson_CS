@@ -4,13 +4,15 @@ int InputInt(string msg)
 {
     System.Console.WriteLine($"{msg}> ");
     int value;
-    if (int.TryParse(Console.ReadLine(), out value))
+    // bool inCorrect = int.TryParse(Console.ReadLine(), out value
+    // if (inCorrect)
+    if (int.TryParse(Console.ReadLine(), out value)) // упрощенный ввод.    // Конвертирует string в цифровое int, возвращает (out) value
     {
         return value;
     }
     System.Console.WriteLine("Вы ввели не число");
-    Environment.Exit(1);
-    return 0;
+    Environment.Exit(1); // оператор выхода  из программы  со значением 1
+    return 0;   // возвращает значение 0
 }
 
 bool ValidateCoords(int x, int y)
