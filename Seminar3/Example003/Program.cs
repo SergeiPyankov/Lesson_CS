@@ -26,4 +26,4 @@ int y1 = InputInt("Введите Y координаты А> ");
 System.Console.WriteLine();
 int x2 = InputInt("Введите X координаты B> ");
 int y2 = InputInt("Введите Y координаты B> ");
-System.Console.WriteLine($"Расстояние между точками А ({x1}, {y1}) и B ({x2}, {y2}), равно => {Distance(x1, y1, x2, y2):F3}");
+System.Console.WriteLine($"Расстояние между точками А ({x1}, {y1}) и B ({x2}, {y2}), равно => {Distance(x1, y1, x2, y2):F3}");  // F3 - сокращает кол-во выводимых знаков до 3-х после запятой
