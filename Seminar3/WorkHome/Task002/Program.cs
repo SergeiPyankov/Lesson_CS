@@ -29,4 +29,4 @@ System.Console.WriteLine();
 int x2 = InputInt("Введите X координаты B> ");
 int y2 = InputInt("Введите Y координаты B> ");
 int z2 = InputInt("Введите Z координаты B> ");
-System.Console.WriteLine($"Расстояние между точками А ({x1}, {y1}, {z1}) и B ({x2}, {y2}, {z2}), равно => {Distance(x1, y1, z1, x2, y2, z2):F3}");
+System.Console.WriteLine($"Расстояние между точками А ({x1}, {y1}, {z1}) и B ({x2}, {y2}, {z2}), равно => {Distance(x1, y1, z1, x2, y2, z2):F2}");
