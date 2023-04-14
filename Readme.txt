@@ -51,6 +51,15 @@ Manual
     Metod
         / Особенности работы методов
 
+    Cycle
+        / Описание циклов
+
+    DataType
+        / Описание типов данных
+
+    If
+        / Описание условий if / else
+
 Seminar1
 
     Example001

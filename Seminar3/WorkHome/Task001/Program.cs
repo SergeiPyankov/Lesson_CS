@@ -3,7 +3,7 @@
 // 23432 -> да
 // 12821 -> да
 
-int InputInt(string msg)
+int InputInt(string msg)    // проверяем корректность ввода 
 {
     Console.Write(msg);
     bool check = int.TryParse(Console.ReadLine(), out int value);
@@ -22,14 +22,14 @@ int InputInt(string msg)
     return 0;
 }
 
-int ReverseNumber(int num)
+int ReverseNumber(int num)  // разворачиваем заданное число
 {
     int reverse;
     for (reverse = 0; num > 0; num = num / 10) reverse = reverse * 10 + num % 10;
     return reverse;
 }
 
-string CheckPlrm(int val, int rev)
+string CheckPlrm(int val, int rev)  // проверяем на палидром
 {
     if (val == rev)
     {
