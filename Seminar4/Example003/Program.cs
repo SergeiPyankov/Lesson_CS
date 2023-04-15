@@ -8,12 +8,16 @@ int InputInt(string msg)
     return Convert.ToInt32(Console.ReadLine());
 }
 
-int CountNumber(int val)
+double Factorial(int val)
 {
-    int count;
-    for (int i = 1; i > num; i++) count = i * i++;
-    return count;
+    double count = 1;
+    for (int i = 1; i <= val; i++)
+    {
+        count *= i;
+        System.Console.WriteLine(count);
+    }
+        return count;
 }
 
 int value = InputInt("Введите число> ");
-System.Console.WriteLine($"Произведение чисел от 1 до {value} = {CountNumber(value)}");
+System.Console.WriteLine($"Произведение чисел от 1 до {value} = {Factorial(value)}");
