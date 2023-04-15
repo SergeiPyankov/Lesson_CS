@@ -35,6 +35,7 @@ Metod21(msg1: "Иван", msg2: "Пупкин");
 
 void Metod22(string msg, int count) // метод с двумя параметрами
 {
+    int i = 1;
     if (i < count)
     {
     System.Console.WriteLine($"Привет, {msg}");
@@ -42,14 +43,14 @@ void Metod22(string msg, int count) // метод с двумя параметр
     }
 }
 
-Metod22(msg1: "Иван", 4);   // Вызовет метод с текстом: Иван 4 раза
-Metod22(msg1: "Иван", count: 4); // Альтернативный способ вызова (порядок аргументов не имеет значения)
+Metod22(msg: "Иван", 4);   // Вызовет метод с текстом: Иван 4 раза
+Metod22(msg: "Иван", count: 4); // Альтернативный способ вызова (порядок аргументов не имеет значения)
 
 // Тип 3
 
 int Metod3() // нет аргумента
 {
-    return DateTime.Now/Year; // в качестве аргумента возвращает текущий год
+    return DateTime.Now.Year; // в качестве аргумента возвращает текущий год
 }
 
 int year = Metod3(); // создается новая переменная "year", метод присваивает переменной текущий год
@@ -89,5 +90,5 @@ string Metod41(int count, string text)
     return resalt;
 }
 
-string res = Metod1(4, "Текст + ");    // Текст + Текст + Текст + Текст + 
+//string  res = Metod1(4, "Текст + ");    // Текст + Текст + Текст + Текст + 
 System.Console.WriteLine(res);
