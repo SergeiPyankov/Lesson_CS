@@ -80,16 +80,16 @@ void Metod4()
 
 // При этом можно создавать и определять переменные, которые передаются out-параметрам непосредственно при вызове метода. То есть мы можем сократить предыдущий пример следующим образом:
 
-// void GetRectangleData(int width, int height, out int rectArea, out int rectPerimetr)
-// {
-//     rectArea = width * height;  
-//     rectPerimetr = (width + height) * 2; 
-// }
+void GetRectangleData(int width, int height, out int rectArea, out int rectPerimetr)
+{
+    rectArea = width * height;  
+    rectPerimetr = (width + height) * 2; 
+}
  
-// GetRectangleData(10, 20, out int area, out int perimetr);
+GetRectangleData(10, 20, out int area, out int perimetr);
  
-// Console.WriteLine($"Площадь прямоугольника: {area}");       // 200
-// Console.WriteLine($"Периметр прямоугольника: {perimetr}");   // 60
+Console.WriteLine($"Площадь прямоугольника: {area}");       // 200
+Console.WriteLine($"Периметр прямоугольника: {perimetr}");   // 60
 
 // При этом, если нам неизвестен тип значений, которые будут присвоены параметрам, то мы можем для их определения использовать оператор var:
 
