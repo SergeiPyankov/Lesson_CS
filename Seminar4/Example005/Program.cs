@@ -24,8 +24,7 @@ void PrintArray(int[] arr)
 
 int SecondMax(int[] arr)
 {
-    int smax = 0;
-    int max = arr[0];
+    int smax = 0, max = arr[0];
 
     for (int i = 1; i < arr.Length; i++)
     {
