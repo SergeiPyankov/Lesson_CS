@@ -82,42 +82,49 @@ void Metod4()
 
 void GetRectangleData(int width, int height, out int rectArea, out int rectPerimetr)
 {
-    rectArea = width * height;  
-    rectPerimetr = (width + height) * 2; 
+    rectArea = width * height;
+    rectPerimetr = (width + height) * 2;
 }
- 
+
 GetRectangleData(10, 20, out int area, out int perimetr);
- 
+
 Console.WriteLine($"Площадь прямоугольника: {area}");       // 200
 Console.WriteLine($"Периметр прямоугольника: {perimetr}");   // 60
 
 // При этом, если нам неизвестен тип значений, которые будут присвоены параметрам, то мы можем для их определения использовать оператор var:
 
-// GetRectangleData(10, 20, out var area, out var perimetr);
- 
-// Console.WriteLine($"Площадь прямоугольника: {area}");       // 200
-// Console.WriteLine($"Периметр прямоугольника: {perimetr}");   // 60
+GetRectangleData(10, 20, out var area1, out var perimetr1);
+
+Console.WriteLine($"Площадь прямоугольника: {area1}");       // 200
+Console.WriteLine($"Периметр прямоугольника: {perimetr1}");   // 60
 
 
 // Входные параметры. Модификатор in
+
 // Кроме выходных параметров с модификатором out метод может использовать входные параметры с модификатором in. Модификатор in указывает, что данный параметр будет передаваться в метод по ссылке, 
 // однако внутри метода его значение параметра нельзя будет изменить. Например, возьмем следующий метод:
 
-// void GetRectangleData(in int width, in int height, out int rectArea, out int rectPerimetr)
-// {
-//     //width = 25; // нельзя изменить, так как width - входной параметр
-//     rectArea = width * height;      
-//     rectPerimetr = (width + height) * 2;
-// }
- 
-// int w = 10;
-// int h = 20;
-// GetRectangleData(w, h, out var area, out var perimetr);
- 
-// Console.WriteLine($"Площадь прямоугольника: {area}");       // 200
-// Console.WriteLine($"Периметр прямоугольника: {perimetr}");   // 60
+void Metod5()
+{
+    void GetRectangleData(in int width, in int height, out int rectArea, out int rectPerimetr)
+    {
+        //width = 25; // нельзя изменить, так как width - входной параметр
+        rectArea = width * height;
+        rectPerimetr = (width + height) * 2;
+    }
+
+    int w = 10;
+    int h = 20;
+    GetRectangleData(w, h, out var area, out var perimetr);
+
+    Console.WriteLine($"Площадь прямоугольника: {area}");       // 200
+    Console.WriteLine($"Периметр прямоугольника: {perimetr}");   // 60
+}
+
 // В данном случае через входные параметры width и height в метод передаются значения, но в самом методе мы не можем изменить значения этих параметров, так как они определены с модификатором in.
 
 // Передача по ссылке в некоторых случаях может увеличить произодительность, а использование оператора in гарантирует, что значения переменных, которые передаются параметрам, нельзя будет изменить в этом методе.
 
 Metod1();
+
+https://learn.microsoft.com/ru-ru/dotnet/api/system.random?view=net-7.0 - методы для Random

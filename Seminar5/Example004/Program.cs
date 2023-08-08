@@ -14,7 +14,7 @@ int[] PrintRandomArray()
     return arr;
 }
 
-int SearchNumber(int[] arr)
+int SearchTwoDigits(int[] arr)
 {
     int count = 0;
     for (int i = 0; i < arr.Length; i++) if (arr[i] > 9 && arr[i] < 100) count++;
@@ -22,4 +22,4 @@ int SearchNumber(int[] arr)
 }
 
 int[] array = PrintRandomArray();
-System.Console.Write($"Количество двузначных чисел в массиве: {SearchNumber(array)}");
+System.Console.Write($"Количество двузначных чисел в массиве: {SearchTwoDigits(array)}");

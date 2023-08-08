@@ -27,7 +27,7 @@ void Metod1()
 
     int[] PrintReverseNumArr(int[] arr)
     {
-        for (int i = 0; i < arr.Length; i++) arr[i] = arr[i] - arr[i] - arr[i];
+        for (int i = 0; i < arr.Length; i++) arr[i] = arr[i] - arr[i] - arr[i]; // или arr[i] *= -1;
         Console.WriteLine($"Инверсия массива => ");
         for (int i = 0; i < arr.Length; i++) Console.Write(arr[i] + ", ");
         return arr;

@@ -21,7 +21,7 @@ int[] PrintRandomArray(int size)
     Console.Write($"Случайно сгенерированный массив из {size} элементов от 1 до 9: ");
     for (int i = 0; i < arr.Length; i++) Console.Write(arr[i] + ", ");
     return arr;
-}
+} 
 
 string SearchUserNum(int[] arr, int number)
 {
