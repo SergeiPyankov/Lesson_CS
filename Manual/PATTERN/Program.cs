@@ -55,6 +55,21 @@ void PrintArray(int[] arr)
         for (int i = 1; i < arr.Length; i++) System.Console.Write($"{arr[i]} ");
     }
 
+// Заполнение и печать многомерного массива
+
+void PrintArray1(int[,] inArray)
+{
+    for (int i = 0; i < inArray.GetLength(0); i++) // GetLength(0) отвечает за длину строк
+    {
+        for (int j = 0; j < inArray.GetLength(1); j++) // GetLength(1) отвечает за длину столбцов
+        {
+            inArray[i, j] = new Random().Next(0, 9);
+            System.Console.Write($"{inArray[i, j]} ");
+        }
+        System.Console.WriteLine();
+    }
+}
+
 // Создание и заполниение массива случайными числами
 
 int[] FillArray(int size)
@@ -102,7 +117,7 @@ string SearchUserNum(int[] arr, int number)
     return "No";
 }
 
-// смена положительных иотрицательных значений массива (с + на - ; с - на +)
+// смена положительных и отрицательных значений массива (с + на - ; с - на +)
 
 int[] PrintReverseNumArr(int[] arr)
     {
@@ -112,7 +127,7 @@ int[] PrintReverseNumArr(int[] arr)
         return arr;
     }
 
-// Перемножение  первых и последних чисел массива
+// Перемножение первых и последних чисел массива
 
 int[] CompositionNumArray(int[] arr)
 {
