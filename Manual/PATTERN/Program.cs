@@ -29,11 +29,60 @@ int InputInit(string msg)
             System.Console.WriteLine("Вы ввели отрицательное значение");
             Environment.Exit(1);
         }
+        if (value > 100)
+        {
+            System.Console.WriteLine("Введите число до 100");
+            Environment.Exit(2);
+        }
         return value;
     }
     System.Console.WriteLine("Вы ввели не число");
-    Environment.Exit(2);
+    Environment.Exit(3);
     return 0;
+}
+
+// Создание и заполниение массива случайными числами
+
+int[] FillArray(int size)
+    {
+        int[] arr = new int[size];
+        for (int i = 0; i < arr.Length; i++) arr[i] = new Random().Next(0, 10);
+        return arr;
+    }
+
+// Заполнение многомерного массива уникальными значениями
+
+void FillArray(int[,,] inArray, int maxNum)
+{
+
+    for (int i = 0; i < inArray.GetLength(0); i++)
+    {
+        for (int j = 0; j < inArray.GetLength(1); j++)
+        {
+            for (int h = 0; h < inArray.GetLength(2); h++)
+            {
+                for (int k = 1; k >= 1; k++)
+                {
+                    int num = new Random().Next(1, maxNum + 1);
+                    if (CheckArr(inArray, num))
+                    {
+                        inArray[i, j, h] = num;
+                        System.Console.WriteLine(k);
+                        break;
+                    }
+                }
+            }
+        }
+    }
+}
+
+bool CheckArr(int[,,] arr, int num)
+{
+    foreach (int i in arr)
+    {
+        if (i == num) return false;
+    }
+    return true;
 }
 
 // Создание и вывод массива из случайных чисел
@@ -51,13 +100,21 @@ int[] PrintRandomArray(int size)
 
 void PrintArray(int[] arr)
     {
-        System.Console.Write($"{arr[0]} ");
-        for (int i = 1; i < arr.Length; i++) System.Console.Write($"{arr[i]} ");
+        for (int i = 0; i < arr.Length; i++) Console.Write($"{arr[i]} ");
     }
 
-// Заполнение и печать многомерного массива
+// Заполниение многомерного массива случайными числами
 
-void PrintArray1(int[,] inArray)
+void FillArray(int[,] inArray, int maxNum)
+{
+    for (int i = 0; i < inArray.GetLength(0); i++)
+    {
+        for (int j = 0; j < inArray.GetLength(1); j++) inArray[i, j] = new Random().Next(0, maxNum);
+    }
+}
+// Создание и вывод многомерного массива из случайных чисел
+
+void PrintRandomArray(int[,] inArray)
 {
     for (int i = 0; i < inArray.GetLength(0); i++) // GetLength(0) отвечает за длину строк
     {
@@ -70,14 +127,19 @@ void PrintArray1(int[,] inArray)
     }
 }
 
-// Создание и заполниение массива случайными числами
+// Вывод многомерного массива на экран
 
-int[] FillArray(int size)
+void PrintArray(int[,] inArray)
+{
+    for (int i = 0; i < inArray.GetLength(0); i++) // GetLength(0) отвечает за длину строк
     {
-        int[] arr = new int[size];
-        for (int i = 0; i < arr.Length; i++) arr[i] = new Random().Next(0, 10);
-        return arr;
+        for (int j = 0; j < inArray.GetLength(1); j++) // GetLength(1) отвечает за длину столбцов
+        {
+            System.Console.Write($"{inArray[i, j]} ");
+        }
+        System.Console.WriteLine();
     }
+}
 
 // Поиск второго максимального
 
@@ -167,3 +229,4 @@ double Factorial(int val)
     }
         return count;
 }
+

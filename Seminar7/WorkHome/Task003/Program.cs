@@ -15,14 +15,14 @@ Result(array);
 
 void Result(int[,] inArray)
 {
-    int average = 0;
+    double average = 0;
     for (int i = 0; i < inArray.GetLength(0); i++) // GetLength(0) отвечает за длину строк
     {
         for (int j = 0; j < inArray.GetLength(1); j++) // GetLength(1) отвечает за длину столбцов 
         {
-            average = average + inArray[j, i];
+            average += inArray[j, i];
         }
-        Console.WriteLine($"Среднее арифметическое столбца {i + 1} равно => {average}");
+        Console.WriteLine($"Среднее арифметическое столбца {i + 1} равно => {Math.Round(average / inArray.GetLength(0), 2)}");
         average = 0;
     }
 }
