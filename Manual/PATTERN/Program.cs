@@ -41,6 +41,21 @@ int InputInit(string msg)
     return 0;
 }
 
+// Цикличный ввод пользовательских значений 
+
+int Prompt(string msg)
+{
+    Console.Write(msg);
+    string value = Console.ReadLine();
+    int val = 0;
+    while ((int.TryParse(value, out val)) != true)
+    {
+        Console.Write("Неверный ввод. Повторите => ");
+        value = Console.ReadLine();
+    }
+    return val;
+}
+
 // Создание и заполниение массива случайными числами
 
 int[] FillArray(int size)

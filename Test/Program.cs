@@ -1,39 +1,33 @@
-﻿int[] arr = new int[5];
-RandomArray1(arr, 0, 9);
-PrintArray(arr);
+﻿int number = InputInit("Введите число => ");
+Console.WriteLine(SumNumber(number));
 
-void RandomArray1(int[] array, int min, int max)
+int SumNumber(int number)
 {
-    for (int i = 0; i < array.Length; i++)
+    if (number == 0)
     {
-        Console.WriteLine($"i = {i}");
-        array[i] = new Random().Next(min, max + 1);
-        Console.WriteLine($"Создал случайное число {array[i]}");
-        if (i >= 1)
-        {
-            Console.WriteLine($"Вошел в цикл if 12");
-            for (int j = 0; j < array.Length; j++)
-            {
-                Console.WriteLine($"Вошел в цикл for 15");
-                while (array[i] == array[j])
-                {
-                    Console.WriteLine($"Вошел в цикл while 18");
-                    array[i] = new Random().Next(min, max + 1);
-                    j = 0;
-                    System.Console.WriteLine(array[i]);
-                }
-                Console.WriteLine($"Я здесь 20");
-            }
-            Console.WriteLine($"Я здесь 22");
-        }
-        Console.WriteLine($"Я здесь 24");
+        return 0;
     }
+    return number % 10 + SumNumber(number / 10);
 }
 
-void PrintArray(int[] inArray)
+int InputInit(string msg)
 {
-    for (int i = 0; i < inArray.GetLength(0); i++) // GetLength(0) отвечает за длину строк
+    Console.Write(msg);
+    if (int.TryParse(Console.ReadLine(), out int value))
     {
-        System.Console.Write($"{inArray[i]} ");
+        if (value < 0)
+        {
+            System.Console.WriteLine("Вы ввели отрицательное значение");
+            Environment.Exit(1);
+        }
+        if (value > 1000)
+        {
+            System.Console.WriteLine("Введите число до 1000");
+            Environment.Exit(2);
+        }
+        return value;
     }
+    System.Console.WriteLine("Вы ввели не число");
+    Environment.Exit(3);
+    return 0;
 }
